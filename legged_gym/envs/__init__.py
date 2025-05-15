@@ -39,6 +39,8 @@ from .cassie.cassie import Cassie
 from .cassie.cassie_config import CassieRoughCfg, CassieRoughCfgPPO
 from .a1.a1_config import A1RoughCfg, A1RoughCfgPPO
 
+from legged_gym.envs.xjqr.xjqr_flat_config import xjqrFlatCfg, xjqrFlatCfgPPO
+from legged_gym.envs.xjqr.xjqr_rough_config import xjqrRoughCfg, xjqrRoughCfgPPO
 
 import os
 
@@ -49,3 +51,6 @@ task_registry.register( "anymal_c_flat", Anymal, AnymalCFlatCfg(), AnymalCFlatCf
 task_registry.register( "anymal_b", Anymal, AnymalBRoughCfg(), AnymalBRoughCfgPPO() )
 task_registry.register( "a1", LeggedRobot, A1RoughCfg(), A1RoughCfgPPO() )
 task_registry.register( "cassie", Cassie, CassieRoughCfg(), CassieRoughCfgPPO() )
+
+task_registry.register( "xjqr_flat", LeggedRobot, xjqrFlatCfg(), xjqrFlatCfgPPO() )
+task_registry.register( "xjqr_rough", LeggedRobot, xjqrRoughCfg(), xjqrRoughCfgPPO() )

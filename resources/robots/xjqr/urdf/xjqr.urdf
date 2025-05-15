@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="xjqr">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-6.0181E-09 -0.00020272 -0.049686"
+        rpy="0 0 0" />
+      <mass
+        value="5.1826" />
+      <inertia
+        ixx="0.017409"
+        ixy="-4.2452E-08"
+        ixz="-3.8584E-09"
+        iyy="0.071761"
+        iyz="9.041E-08"
+        izz="0.080947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FL_hip">
+    <inertial>
+      <origin
+        xyz="4.5404E-09 0.0018192 0.058353"
+        rpy="0 0 0" />
+      <mass
+        value="0.60498" />
+      <inertia
+        ixx="0.0009238"
+        ixy="-2.061E-10"
+        ixz="-5.2183E-12"
+        iyy="0.00089151"
+        iyz="-2.2822E-05"
+        izz="0.00050933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_hip.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8549 0.8549 0.8549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_hip.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.125 0.074746 -0.05"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.3"
+      upper="0.3"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FL_thigh">
+    <inertial>
+      <origin
+        xyz="0.056418 -1.2375E-10 0.014918"
+        rpy="0 0 0" />
+      <mass
+        value="0.16961" />
+      <inertia
+        ixx="3.6918E-05"
+        ixy="-2.3505E-13"
+        ixz="-7.7144E-07"
+        iyy="0.00070535"
+        iyz="-3.2904E-13"
+        izz="0.00072058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_thigh.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_thigh.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0425 0.08"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="FL_hip" />
+    <child
+      link="FL_thigh" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.3708"
+      upper="1.3708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FL_knee">
+    <inertial>
+      <origin
+        xyz="-0.0088308 3.4934E-08 -0.022462"
+        rpy="0 0 0" />
+      <mass
+        value="0.045819" />
+      <inertia
+        ixx="1.3807E-05"
+        ixy="-1.4752E-11"
+        ixz="-2.8332E-06"
+        iyy="1.3348E-05"
+        iyz="-7.8263E-13"
+        izz="9.1158E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_knee.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_knee.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.165 0 0.015"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="FL_thigh" />
+    <child
+      link="FL_knee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FL_calf">
+    <inertial>
+      <origin
+        xyz="0.10031 -7.3829E-10 0.0055399"
+        rpy="0 0 0" />
+      <mass
+        value="0.1441" />
+      <inertia
+        ixx="2.4729E-05"
+        ixy="-6.5251E-12"
+        ixz="6.2381E-05"
+        iyy="0.0008421"
+        iyz="-1.7554E-13"
+        izz="0.00084108" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_calf.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_calf.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.03"
+      rpy="0 1.5708 0" />
+    <parent
+      link="FL_knee" />
+    <child
+      link="FL_calf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="2.418"
+      effort="15"
+      velocity="20" />
+  </joint>
+  <link
+    name="FL_foot">
+    <inertial>
+      <origin
+        xyz="-1.3878E-16 -2.7756E-17 -0.010516"
+        rpy="0 0 0" />
+      <mass
+        value="0.005546" />
+      <inertia
+        ixx="1.0234E-06"
+        ixy="5.9353E-21"
+        ixz="4.9318E-21"
+        iyy="1.0234E-06"
+        iyz="1.6831E-21"
+        izz="1.6367E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_foot.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FL_foot.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="FL_calf" />
+    <child
+      link="FL_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RL_hip">
+    <inertial>
+      <origin
+        xyz="-4.5404E-09 0.0018192 -0.058353"
+        rpy="0 0 0" />
+      <mass
+        value="0.60498" />
+      <inertia
+        ixx="0.0009238"
+        ixy="2.061E-10"
+        ixz="-5.2183E-12"
+        iyy="0.00089151"
+        iyz="2.2822E-05"
+        izz="0.00050933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_hip.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8549 0.8549 0.8549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_hip.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.125 0.074746 -0.05"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.3"
+      upper="0.3"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RL_thigh">
+    <inertial>
+      <origin
+        xyz="0.056418 -7.5059E-11 0.014918"
+        rpy="0 0 0" />
+      <mass
+        value="0.16961" />
+      <inertia
+        ixx="3.6918E-05"
+        ixy="-7.2049E-13"
+        ixz="-7.7144E-07"
+        iyy="0.00070535"
+        iyz="-3.4994E-13"
+        izz="0.00072058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_thigh.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_thigh.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0425 -0.08"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="RL_hip" />
+    <child
+      link="RL_thigh" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.3708"
+      upper="1.3708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RL_knee">
+    <inertial>
+      <origin
+        xyz="-0.0088308 3.4934E-08 -0.022462"
+        rpy="0 0 0" />
+      <mass
+        value="0.045819" />
+      <inertia
+        ixx="1.3807E-05"
+        ixy="-1.4752E-11"
+        ixz="-2.8332E-06"
+        iyy="1.3348E-05"
+        iyz="-7.8263E-13"
+        izz="9.1158E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_knee.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_knee.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.165 0 0.015"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="RL_thigh" />
+    <child
+      link="RL_knee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RL_calf">
+    <inertial>
+      <origin
+        xyz="0.10031 -7.3829E-10 0.0055399"
+        rpy="0 0 0" />
+      <mass
+        value="0.1441" />
+      <inertia
+        ixx="2.4729E-05"
+        ixy="-6.5251E-12"
+        ixz="6.2381E-05"
+        iyy="0.0008421"
+        iyz="-1.7554E-13"
+        izz="0.00084108" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_calf.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_calf.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.03"
+      rpy="0 1.5708 0" />
+    <parent
+      link="RL_knee" />
+    <child
+      link="RL_calf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="2.418"
+      effort="15"
+      velocity="20" />
+  </joint>
+  <link
+    name="RL_foot">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 0 -0.010516"
+        rpy="0 0 0" />
+      <mass
+        value="0.005546" />
+      <inertia
+        ixx="1.0234E-06"
+        ixy="-3.8682E-21"
+        ixz="-2.5419E-21"
+        iyy="1.0234E-06"
+        iyz="6.1884E-22"
+        izz="1.6367E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_foot.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RL_foot.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="RL_calf" />
+    <child
+      link="RL_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FR_hip">
+    <inertial>
+      <origin
+        xyz="-4.5404E-09 -0.0018192 0.058353"
+        rpy="0 0 0" />
+      <mass
+        value="0.60498" />
+      <inertia
+        ixx="0.0009238"
+        ixy="-2.061E-10"
+        ixz="5.2183E-12"
+        iyy="0.00089151"
+        iyz="2.2822E-05"
+        izz="0.00050933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_hip.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8549 0.8549 0.8549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_hip.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.125 -0.075254 -0.05"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_hip" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.3"
+      upper="0.3"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FR_thigh">
+    <inertial>
+      <origin
+        xyz="0.056418 1.3742E-10 -0.014918"
+        rpy="0 0 0" />
+      <mass
+        value="0.16961" />
+      <inertia
+        ixx="3.6918E-05"
+        ixy="8.8712E-14"
+        ixz="7.7144E-07"
+        iyy="0.00070535"
+        iyz="-3.8194E-13"
+        izz="0.00072058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_thigh.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_thigh.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0425 0.08"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="FR_hip" />
+    <child
+      link="FR_thigh" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.3708"
+      upper="1.3708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FR_knee">
+    <inertial>
+      <origin
+        xyz="0.0088308 -3.4934E-08 -0.022462"
+        rpy="0 0 0" />
+      <mass
+        value="0.045819" />
+      <inertia
+        ixx="1.3807E-05"
+        ixy="-1.4752E-11"
+        ixz="2.8332E-06"
+        iyy="1.3348E-05"
+        iyz="7.8263E-13"
+        izz="9.1158E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_knee.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_knee.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.165 0 -0.015"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="FR_thigh" />
+    <child
+      link="FR_knee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="FR_calf">
+    <inertial>
+      <origin
+        xyz="0.10031 7.3829E-10 -0.0055399"
+        rpy="0 0 0" />
+      <mass
+        value="0.1441" />
+      <inertia
+        ixx="2.4729E-05"
+        ixy="6.5251E-12"
+        ixz="-6.2381E-05"
+        iyy="0.0008421"
+        iyz="-1.7554E-13"
+        izz="0.00084108" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_calf.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_calf.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.03"
+      rpy="0 1.5708 0" />
+    <parent
+      link="FR_knee" />
+    <child
+      link="FR_calf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="2.418"
+      effort="15"
+      velocity="20" />
+  </joint>
+  <link
+    name="FR_foot">
+    <inertial>
+      <origin
+        xyz="-1.1102E-16 8.3267E-17 -0.010516"
+        rpy="0 0 0" />
+      <mass
+        value="0.005546" />
+      <inertia
+        ixx="1.0234E-06"
+        ixy="-2.7292E-21"
+        ixz="4.4715E-21"
+        iyy="1.0234E-06"
+        iyz="-4.4646E-21"
+        izz="1.6367E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_foot.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/FR_foot.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="FR_calf" />
+    <child
+      link="FR_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RR_hip">
+    <inertial>
+      <origin
+        xyz="4.5404E-09 -0.0018192 -0.058353"
+        rpy="0 0 0" />
+      <mass
+        value="0.60498" />
+      <inertia
+        ixx="0.0009238"
+        ixy="2.061E-10"
+        ixz="5.2183E-12"
+        iyy="0.00089151"
+        iyz="-2.2822E-05"
+        izz="0.00050933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_hip.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8549 0.8549 0.8549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_hip.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.125 -0.075254 -0.05"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_hip" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.3"
+      upper="0.3"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RR_thigh">
+    <inertial>
+      <origin
+        xyz="0.056418 1.5837E-10 -0.014918"
+        rpy="0 0 0" />
+      <mass
+        value="0.16961" />
+      <inertia
+        ixx="3.6918E-05"
+        ixy="-1.2208E-13"
+        ixz="7.7144E-07"
+        iyy="0.00070535"
+        iyz="-3.335E-13"
+        izz="0.00072058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_thigh.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_thigh.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0425 -0.08"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="RR_hip" />
+    <child
+      link="RR_thigh" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.3708"
+      upper="1.3708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RR_knee">
+    <inertial>
+      <origin
+        xyz="0.0088308 -3.4934E-08 -0.022462"
+        rpy="0 0 0" />
+      <mass
+        value="0.045819" />
+      <inertia
+        ixx="1.3807E-05"
+        ixy="-1.4752E-11"
+        ixz="2.8332E-06"
+        iyy="1.3348E-05"
+        iyz="7.8263E-13"
+        izz="9.1158E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_knee.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_knee.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.165 0 -0.015"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="RR_thigh" />
+    <child
+      link="RR_knee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="20" />
+  </joint>
+  <link
+    name="RR_calf">
+    <inertial>
+      <origin
+        xyz="0.10031 7.3829E-10 -0.0055399"
+        rpy="0 0 0" />
+      <mass
+        value="0.1441" />
+      <inertia
+        ixx="2.4729E-05"
+        ixy="6.5251E-12"
+        ixz="-6.2381E-05"
+        iyy="0.0008421"
+        iyz="-1.7554E-13"
+        izz="0.00084108" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_calf.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_calf.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.03"
+      rpy="0 1.5708 0" />
+    <parent
+      link="RR_knee" />
+    <child
+      link="RR_calf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="2.418"
+      effort="15"
+      velocity="20" />
+  </joint>
+  <link
+    name="RR_foot">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 -1.1102E-16 -0.010516"
+        rpy="0 0 0" />
+      <mass
+        value="0.005546" />
+      <inertia
+        ixx="1.0234E-06"
+        ixy="7.9305E-22"
+        ixz="3.4276E-21"
+        iyy="1.0234E-06"
+        iyz="2.7106E-21"
+        izz="1.6367E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_foot.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/ime-lab/legged_gym/resources/robots/xjqr/meshes/RR_foot.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.2 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="RR_calf" />
+    <child
+      link="RR_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
